@@ -6,17 +6,17 @@ function setup() {
   createCanvas(400,400);
   engine = Engine.create()
   world = engine.world;
-  var options = {
+  var ground_options = {
     isStatic: true
   }
-  object = Bodies.rectangle(200,400,400,20,options)
-  World.add(world,object)
-  console.log(object)
+  ground = Bodies.rectangle(200,400,400,20,ground_options)
+  World.add(world,ground)
+  console.log(ground)
 }
 
 function draw() {
   background("blue"); 
   Engine.update(engine)
   rectMode(CENTER) 
-  rect(object.position.x,object.position.y,400,20)
+  rect(ground.position.x,ground.position.y,400,20)
 }
